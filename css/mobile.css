@@ -1,0 +1,230 @@
+/* ================================
+   GLOBAL RESET (Mobile)
+================================ */
+
+body {
+  font-size: 16px;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.header__inner {
+  height: 60px;
+  padding: 0 16px;
+}
+
+.header__menu {
+  width: auto;
+}
+
+.header__menu a {
+  font-size: 14px;
+  padding: 8px;
+}
+
+/* ================================
+   VISUAL
+================================ */
+
+.visual_inner {
+  margin-top: 160px;
+  padding: 0 16px;
+}
+
+.visual_inner h2 {
+  font-size: clamp(36px, 10vw, 52px);
+  line-height: 1.1;
+}
+
+/* WebGL 모바일 안정화 */
+#visual_dimension {
+  height: 50vh;
+}
+
+#webgl {
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+.about_inner {
+  flex-direction: column;
+  margin-top: 120px;
+  padding: 0 16px;
+}
+
+.about_title,
+.about_text {
+  width: 100%;
+}
+
+.about_title .left_tit {
+  position: relative;
+  height: auto;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.finger_emoji {
+  display: none;
+}
+
+.about_text h3 {
+  font-size: 48px;
+  margin-top: 40px;
+}
+
+.about_text p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ================================
+   WEBSITE
+================================ */
+
+.website_title {
+  flex-direction: column;
+  gap: 16px;
+  padding: 120px 16px 24px;
+}
+
+.website_title span {
+  width: 100%;
+  font-size: 28px;
+}
+
+.website_box {
+  flex-direction: column;
+  gap: 60px;
+}
+
+.website_box > li {
+  width: 100%;
+}
+
+.website_imgbox {
+  height: 220px;
+}
+
+.website_box h3 {
+  font-size: 22px;
+}
+
+/* ================================
+   PANEL / STICKY 제거
+================================ */
+
+.panel {
+  position: relative;
+  height: auto;
+  padding: 80px 16px;
+}
+
+.panel .webtext,
+.panel .webbox {
+  width: 100%;
+  margin: 0;
+}
+
+.webtext_desc p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================================
+   JAVASCRIPT SECTION
+================================ */
+
+.java-wrap {
+  position: relative;
+  height: auto;
+}
+
+.middle_box video {
+  width: 100%;
+  height: auto;
+}
+
+.java_desc_box {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.java_desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================================
+   ANIMATION
+================================ */
+
+.animation_inner {
+  padding: 80px 16px;
+}
+
+.animation_box {
+  flex-direction: column;
+}
+
+.left_animation,
+.right_animation {
+  width: 100%;
+  height: auto;
+}
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact_box {
+  flex-direction: column;
+}
+
+.contact_photo,
+.contact_desc {
+  width: 100%;
+}
+
+.contact_desc p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.contact_mail_button,
+.contact_call_button {
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer_inner {
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 16px;
+}
+
+.foot_left,
+.foot_right {
+  width: 100%;
+}
+
+.foot_left span,
+.foot_right dt {
+  font-size: 14px;
+}
