@@ -294,11 +294,18 @@ body.fixed {
 body {
   background: #f1ede8;
   overflow-x: hidden;
-  height: 200vh;
+  min-height: 100vh;
+}
+
+/* 모바일에서는 fixed 비활성 */
+@media (max-width: 768px) {
+  body.fixed {
+    overflow: auto;
+    height: auto;
+  }
 }
 
 /*header*/
-
 .header__inner {
   width: 100%;
   height: 70px;
@@ -369,7 +376,7 @@ body {
 
   .header__logo {
     width: 15%;
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -517,8 +524,8 @@ body {
 }
 
 #webgl {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   position: absolute;
   left: 0;
   top: 0;
@@ -611,7 +618,7 @@ body {
 
 @media (max-width: 600px) {
   .about_inner {
-    margin-top: 130px;
+    margin-top: 10%;
     padding-bottom: 160px;
   }
 
@@ -950,11 +957,11 @@ body {
 
 @media (max-width: 600px) {
   .website_title {
-    padding-top: 150px;
+    padding-top: 15%;
   }
 
   .website_imgbox {
-    height: 200px;
+    height: 38vw;
   }
 
   .website_box > li {
@@ -967,7 +974,7 @@ body {
   }
 
   .website_box li ul li {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   .website_pro {
@@ -975,12 +982,19 @@ body {
   }
 
   .webtext_desc p {
-    font-size: 0.3vw;
-    line-height: 2.7vw;
+    font-size: 3vw;
+    line-height: 1.5;
+  }
+
+  .web_view {
+    margin-top: 10%;
   }
 
   .web_view a {
-    font-size: 0.3vw;
+    font-size: 3vw;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 8% 12%;
   }
 
   .card .details h2 {
@@ -1633,7 +1647,7 @@ body {
   }
 
   .java-wrap {
-    height: 550px;
+    height: 195vw;
   }
 
   .java_desc {
@@ -1641,8 +1655,9 @@ body {
   }
 
   .java_bottom span {
-    font-size: 0.2vw;
+    font-size: 2.5vw;
     padding: 1vw;
+    white-space: nowrap;
   }
 }
 
@@ -2117,6 +2132,9 @@ body {
 
 @media (max-width: 600px) {
   .foot_left span {
-    line-height: 2.3vw;
+        line-height: 2.3vw;
+        font-size: 3vw;
+        white-space: nowrap;
+        line-height: 1.3;
   }
 }

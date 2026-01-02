@@ -1,7 +1,6 @@
 /*GSAP 애니메이션*/
 
 /* Header */
-
 gsap.set(".header__inner", {
   background: "##F1EDE8",
 });
@@ -31,7 +30,6 @@ gsap.to(".header__inner a", {
 });
 
 /* Visual */
-
 document.querySelectorAll(".splitText").forEach((desc) => {
   let splitText = desc.innerText;
   let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
@@ -125,7 +123,6 @@ gsap.to("#visual_dimension", {
 });
 
 /*About */
-
 gsap.set("#about", {
   duration: 0.3,
   background: "##F1EDE8",
@@ -147,7 +144,6 @@ gsap.to("#about", {
 });
 
 /* Website */
-
 gsap.set(".website_box li", {
   y: 150,
   opacity: 0,
@@ -165,22 +161,8 @@ gsap.to(".website_box li", {
   },
 });
 
-/*
-gsap.to(".panel .webbox", {
-  transform: "rotate(-4deg)",
-  marginBottom: "-5%",
-  duration: 1.7,
-  stagger: 2,
-  scrollTrigger: {
-    trigger: ".website_pro",
-    start: ".website_imgbox 60%",
-    end: "bottom",
-  },
-});
-*/
 
 /* Animation */
-
 gsap.set(".animation_inner h2", {
   y: 90,
   opacity: 0,
@@ -204,36 +186,6 @@ window.addEventListener("scroll", function () {
   text.style.transform = "rotate(" + window.scrollY * 0.15 + "deg)";
 });
 
-/* Javascript */
-/*
-gsap.set(".project", { zIndex: (i, target, targets) => targets.length - i });
-
-// Project stack FX
-let projects = gsap.utils.toArray(".project");
-// let projectImages = gsap.utils.toArray('.project .project-container__inner');
-
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#javascript",
-    start: () => "top top",
-    end: () => "" + (projects.length - 1) * window.innerHeight,
-    scrub: 0.8,
-    pin: true,
-    invalidateOnRefresh: true,
-  },
-});
-
-projects.forEach((project, i) => {
-  if (i !== projects.length - 1) {
-    tl.to(project, {
-      xPercent: -92 + (projects.length - 1),
-      ease: "none",
-      stagger: 0.5,
-      scrub: 0.8,
-    });
-  }
-});
-*/
 
 gsap
   .timeline({
@@ -257,8 +209,8 @@ gsap
     x: 0,
   });
 
-/* Slogan */
 
+/* Slogan */
 gsap.to(".slogan_line_box ul li", {
   duration: 2,
   marginTop: "0.6vw",
@@ -269,101 +221,6 @@ gsap.to(".slogan_line_box ul li", {
     toggleActions: "restart none none none",
   },
 });
-
-/* Smooth */
-
-/*
-window.addEventListener("load", function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const pageContainer = document.querySelector("#smooth-wrapper");
-  pageContainer.setAttribute("data-scroll-container", "");
-
-  const scroller = new LocomotiveScroll({
-    el: pageContainer,
-    smooth: true,
-    getDirection: true,
-  });
-
-  scroller.on("scroll", function (t) {
-    document.documentElement.setAttribute("data-direction", t.direction);
-  });
-
-  scroller.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy(pageContainer, {
-    scrollTop(value) {
-      return arguments.length
-        ? scroller.scrollTo(value, 0, 0)
-        : scroller.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        left: 0,
-        top: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: pageContainer.style.transform ? "transform" : "fixed",
-  });
-
-  // Pinning and horizontal scrolling
-
-  let horizontalSections = document.querySelectorAll(".horizontal-scroll");
-
-  horizontalSections.forEach((horizontalSection) => {
-    let pinWrap = horizontalSection.querySelector(".pin-wrap");
-    let pinWrapWidth = pinWrap.offsetWidth;
-    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-    gsap.to(pinWrap, {
-      scrollTrigger: {
-        scroller: "[data-scroll-container]",
-        scrub: true,
-        trigger: horizontalSection,
-        pin: true,
-        start: "top top",
-        end: () => `+=${pinWrapWidth}`,
-        invalidateOnRefresh: true,
-      },
-      x: -horizontalScrollLength,
-      ease: "none",
-    });
-  });
-*/
-/* COLOR CHANGER */
-/*
-  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-  scrollColorElems.forEach((colorSection, i) => {
-    const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-    const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
-
-    ScrollTrigger.create({
-      trigger: colorSection,
-      scroller: "[data-scroll-container]",
-      start: "top 50%",
-      onEnter: () =>
-        gsap.to("body", {
-          backgroundColor: colorSection.dataset.bgcolor,
-          color: colorSection.dataset.textcolor,
-          overwrite: "auto",
-        }),
-      onLeaveBack: () =>
-        gsap.to("body", {
-          backgroundColor: prevBg,
-          color: prevText,
-          overwrite: "auto",
-        }),
-    });
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => scroller.update());
-
-  ScrollTrigger.refresh();
-});
-*/
-
-/* Slogan */
 
 const webtext = document.querySelectorAll(".slogan_txt_text");
 const halfX = window.innerWidth / 2;
@@ -384,25 +241,23 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
+
+/* ================= FINGER EMOJI ================= */
 const aboutSections = document.querySelectorAll("#about .about_text > div");
 const fingerEmoji = document.querySelector(".finger_emoji");
-
-// 각 문단에 대응하는 손가락 모양
-const fingerEmojis = ["☝️", "✌️", "🤟"]; // 1, 2, 3 모양
+const fingerEmojis = ["☝️", "✌️", "🤟"];
 
 function updateFingerEmoji() {
-  const viewportHeight = window.innerHeight;
-  const triggerPoint = viewportHeight * 0.2; // 화면의 60% 지점
+  const triggerPoint = window.innerHeight * 0.3;
 
-  aboutSections.forEach((section, index) => {
+  aboutSections.forEach((section, i) => {
     const rect = section.getBoundingClientRect();
-
-    // 문단 상단이 triggerPoint를 지나고, 문단 하단이 triggerPoint보다 아래에 있을 때
     if (rect.top < triggerPoint && rect.bottom > triggerPoint) {
-      fingerEmoji.textContent = fingerEmojis[index] || "☝️";
+      fingerEmoji.textContent = fingerEmojis[i] || "☝️";
     }
   });
 }
 
 window.addEventListener("scroll", updateFingerEmoji);
-updateFingerEmoji(); // 초기 실행
+updateFingerEmoji();
+

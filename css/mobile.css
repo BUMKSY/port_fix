@@ -1,56 +1,26 @@
-/* ================================
-   GLOBAL RESET (Mobile)
-================================ */
 
-body {
-  font-size: 16px;
+.header__menu li a {
+  font-size: 3vw;
 }
 
-section {
-  overflow-x: hidden;
-}
-
-/* ================================
-   HEADER
-================================ */
-
-.header__inner {
-  height: 60px;
-  padding: 0 16px;
-}
-
-.header__menu {
-  width: auto;
-}
-
-.header__menu a {
-  font-size: 14px;
-  padding: 8px;
-}
 
 /* ================================
    VISUAL
 ================================ */
 
-.visual_inner {
-  margin-top: 160px;
-  padding: 0 16px;
-}
-
-.visual_inner h2 {
-  font-size: clamp(36px, 10vw, 52px);
-  line-height: 1.1;
-}
-
 /* WebGL 모바일 안정화 */
 #visual_dimension {
-  height: 50vh;
+  margin-top: 7%;
 }
 
 #webgl {
   opacity: 0.6;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.visual_line_box ul li span {
+  font-size: 1.8vw !important;
 }
 
 /* ================================
@@ -58,173 +28,91 @@ section {
 ================================ */
 
 .about_inner {
-  flex-direction: column;
-  margin-top: 120px;
-  padding: 0 16px;
-}
-
-.about_title,
-.about_text {
-  width: 100%;
-}
-
-.about_title .left_tit {
-  position: relative;
-  height: auto;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.finger_emoji {
-  display: none;
+  padding-bottom: 15%;
 }
 
 .about_text h3 {
-  font-size: 48px;
-  margin-top: 40px;
+  margin-top: 15%;
+}
+
+.about_text > div:first-child h3 {
+  margin-top: 0;
+}
+
+.about_title .left_tit {
+  font-size: 6vw !important;
 }
 
 .about_text p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 3vw;
+  line-height: 1.5;
+  margin-top: 0;
 }
 
-/* ================================
-   WEBSITE
-================================ */
 
-.website_title {
-  flex-direction: column;
-  gap: 16px;
-  padding: 120px 16px 24px;
+
+
+.animation_box .left_animation {
+  width: 100% !important;
 }
 
-.website_title span {
-  width: 100%;
-  font-size: 28px;
+
+.right_animation {
+  display: none !important;
 }
 
-.website_box {
-  flex-direction: column;
-  gap: 60px;
+
+
+.panel .webtext h3 {
+  font-size: 3vw;
 }
 
-.website_box > li {
-  width: 100%;
+.webtext_title {
+  margin-top: 2%;
 }
 
-.website_imgbox {
-  height: 220px;
+.webtext_title p {
+  font-size: 5vw;
 }
 
-.website_box h3 {
-  font-size: 22px;
-}
-
-/* ================================
-   PANEL / STICKY 제거
-================================ */
-
-.panel {
-  position: relative;
-  height: auto;
-  padding: 80px 16px;
-}
-
-.panel .webtext,
-.panel .webbox {
-  width: 100%;
-  margin: 0;
-}
-
-.webtext_desc p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ================================
-   JAVASCRIPT SECTION
-================================ */
-
-.java-wrap {
-  position: relative;
-  height: auto;
-}
-
-.middle_box video {
-  width: 100%;
-  height: auto;
-}
-
-.java_desc_box {
-  width: 100%;
-  margin: 40px 0;
+.java_desc_title {
+  font-size: 8vw;
+  line-height: 1.2;
 }
 
 .java_desc {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 4vw;
+  line-height: 1.2;
+  margin-top: 12%;
 }
 
-/* ================================
-   ANIMATION
-================================ */
-
-.animation_inner {
-  padding: 80px 16px;
+.h-button {
+  padding: 5% 15%;
 }
 
-.animation_box {
-  flex-direction: column;
+.java-wrap h3 {
+  font-size: 3.6vw;
 }
 
-.left_animation,
-.right_animation {
-  width: 100%;
-  height: auto;
-}
 
-/* ================================
-   CONTACT
-================================ */
-
-.contact_box {
-  flex-direction: column;
-}
-
-.contact_photo,
-.contact_desc {
-  width: 100%;
+.contact_inner h2 {
+  font-size: 3.4vw;
+  line-height: 1.3;
 }
 
 .contact_desc p {
-  font-size: 24px;
-  text-align: center;
+  font-size: 3vw;
 }
 
-.contact_mail_button,
-.contact_call_button {
-  width: 100%;
-  height: 48px;
-  font-size: 14px;
+.foot_left_title {
+  font-size: 3.2vw;
 }
 
-/* ================================
-   FOOTER
-================================ */
-
-.footer_inner {
-  flex-direction: column;
-  gap: 40px;
-  padding: 80px 16px;
+.foot_right dl dt {
+  font-size: 2.6vw;
 }
 
-.foot_left,
-.foot_right {
-  width: 100%;
-}
-
-.foot_left span,
-.foot_right dt {
-  font-size: 14px;
+.foot_left .info {
+  width: 10vw;
+  height: 10vw;
 }
